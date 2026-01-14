@@ -1,14 +1,18 @@
-# FolderIcon
+# auto-folder-icon
 
-A tiny macOS CLI tool to set custom folder icons from embedded icon files.
+A macOS CLI tool to set folder icons from embedded project assets.
+
+I use this to brand all my Swift package folders so I can quickly identify them in Finder.
+
+![Finder window showing Swift package folders with custom brand icons including SwiftEmoji, SwiftShortcuts, AdaptiveDimensions, SettingsKit, MenuWithAView, Chronicle, CursorBounds, Loupe, NotchMyProblem, GlowGetter, Conditionals, and UniversalGlass](assets/screenshot.png)
 
 ## Installation
 
 ### From Source
 
 ```bash
-git clone https://github.com/yourusername/FolderIcon.git
-cd FolderIcon
+git clone https://github.com/aethertap/auto-folder-icon.git
+cd auto-folder-icon
 swift build -c release
 cp .build/release/foldericon /usr/local/bin/
 ```
@@ -16,7 +20,7 @@ cp .build/release/foldericon /usr/local/bin/
 ### Homebrew (coming soon)
 
 ```bash
-brew install foldericon
+brew install auto-folder-icon
 ```
 
 ## Usage
@@ -40,7 +44,7 @@ foldericon --remove ~/Projects/MyApp
 
 ## How It Works
 
-FolderIcon searches for `icon.png` in common locations within your project:
+auto-folder-icon searches for `icon.png` in common locations within your project:
 
 1. `assets/icon.png`
 2. `resources/icon.png`
@@ -64,7 +68,7 @@ If not found in these locations, it searches recursively (skipping `.build`, `no
 
 ## .gitignore
 
-By default, FolderIcon adds `Icon?` to each folder's `.gitignore` to prevent the macOS icon resource file from being tracked by git. Use `--skip-gitignore` to disable this behavior.
+By default, auto-folder-icon adds `Icon?` to each folder's `.gitignore` to prevent the macOS icon resource file from being tracked by git. Use `--skip-gitignore` to disable this behavior.
 
 ## Requirements
 
