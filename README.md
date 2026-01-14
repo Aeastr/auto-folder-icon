@@ -11,7 +11,7 @@ I use this to brand all my Swift package folders so I can quickly identify them 
 ### From Source
 
 ```bash
-git clone https://github.com/aethertap/auto-folder-icon.git
+git clone https://github.com/Aeastr/auto-folder-icon.git
 cd auto-folder-icon
 swift build -c release
 cp .build/release/foldericon /usr/local/bin/
